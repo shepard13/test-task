@@ -1,0 +1,6 @@
+# PyCharm IDE files
+/.idea
+
+
+# Database files
+/docker/db/data
