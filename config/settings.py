@@ -13,10 +13,10 @@ APPS_DIR = ROOT_DIR.path('test-task')
 # sys.path.append(str(ROOT_DIR))
 
 env = environ.Env(
-    DJANGO_DEBUG=(bool, False),
+    DJANGO_DEBUG=(bool, True),
     DJANGO_SECRET_KEY=(str, '^0mklmc1pa(fx71!v_7m_f-9g5$r=^=54^yq1ch#43r1z@7yuu'),
-    DJANGO_ADMINS=(list, []),
-    DJANGO_ALLOWED_HOSTS=(list, []),
+    DJANGO_ADMINS=(list, ['some.user@gmail.com']),
+    DJANGO_ALLOWED_HOSTS=(list, ['*']),
     DJANGO_STATIC_ROOT=(str, str(APPS_DIR('staticfiles'))),
     DJANGO_MEDIA_ROOT=(str, str(APPS_DIR('media'))),
     DJANGO_DATABASE_URL=(str, 'postgres://root:Jv8rLsTUqyPau7q8Yamm@db:5432/test_products_task'),
@@ -26,8 +26,8 @@ env = environ.Env(
     DJANGO_STRIPE_PUBLIC_KEY=(str, ''),
     DJANGO_STRIPE_SECRET_KEY=(str, ''),
     
-    DJANGO_USE_DEBUG_TOOLBAR=(bool, False),
-    DJANGO_TEST_RUN=(bool, False),
+    DJANGO_USE_DEBUG_TOOLBAR=(bool, True),
+    DJANGO_TEST_RUN=(bool, True),
 
     DJANGO_HEALTH_CHECK_BODY=(str, 'Success'),
 )
