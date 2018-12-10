@@ -9,17 +9,17 @@ import environ
 
 
 ROOT_DIR = environ.Path(__file__) - 2  # (/a/myfile.py - 2 = /)
-APPS_DIR = ROOT_DIR.path('test_products_task')
+APPS_DIR = ROOT_DIR.path('test-task')
 # sys.path.append(str(ROOT_DIR))
 
 env = environ.Env(
     DJANGO_DEBUG=(bool, False),
-    DJANGO_SECRET_KEY=(str, 'CHANGEME!!!e8!1671ifpp362f9gbd3v@e($0_flznbb3fa2d4zg7zn@%yyk2'),
+    DJANGO_SECRET_KEY=(str, '^0mklmc1pa(fx71!v_7m_f-9g5$r=^=54^yq1ch#43r1z@7yuu'),
     DJANGO_ADMINS=(list, []),
     DJANGO_ALLOWED_HOSTS=(list, []),
     DJANGO_STATIC_ROOT=(str, str(APPS_DIR('staticfiles'))),
     DJANGO_MEDIA_ROOT=(str, str(APPS_DIR('media'))),
-    DJANGO_DATABASE_URL=(str, 'postgres:///test_products_task'),
+    DJANGO_DATABASE_URL=(str, 'postgres://root:Jv8rLsTUqyPau7q8Yamm@db:5432/test_products_task'),
     DJANGO_EMAIL_URL=(environ.Env.email_url_config, 'consolemail://'),
     DJANGO_DEFAULT_FROM_EMAIL=(str, 'admin@example.com'),
     DJANGO_SERVER_EMAIL=(str, 'root@localhost.com'),
