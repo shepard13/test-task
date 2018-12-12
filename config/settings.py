@@ -8,9 +8,9 @@ import sys
 import environ
 
 
-ROOT_DIR = environ.Path(__file__) - 2  # (/a/myfile.py - 2 = /)
+ROOT_DIR = environ.Path(__file__) - 3  # (/a/myfile.py - 2 = /)
 APPS_DIR = ROOT_DIR.path('test-task')
-# sys.path.append(str(ROOT_DIR))
+sys.path.append(str(ROOT_DIR))
 
 env = environ.Env(
     DJANGO_DEBUG=(bool, True),
@@ -117,7 +117,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            str(APPS_DIR.path('templates')),
+            str(APPS_DIR.path('test_products_task/templates')),
         ],
         'OPTIONS': {
             'debug': DEBUG,
