@@ -3,7 +3,7 @@ services:
   web:
     build: ./docker/web
     ports:
-      - "8000:80"
+      - "8000:8000"
     volumes:
       - ./:/opt/test-task
     depends_on:
