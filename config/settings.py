@@ -146,7 +146,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = env('DJANGO_MEDIA_ROOT')
 
 STATICFILES_DIRS = (
-    str(APPS_DIR.path('static')),
+    str(APPS_DIR.path('test_products_task/static')),
 )
 
 STATICFILES_FINDERS = (
