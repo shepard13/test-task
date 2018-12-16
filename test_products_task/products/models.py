@@ -34,6 +34,7 @@ class Product(TimeStampedModel):
     price = models.DecimalField(_('Price'), decimal_places=2, max_digits=9)
     description = models.TextField(_('Description'), blank=True)
     category = models.ForeignKey(Category, related_name='products')
+    img = models.ImageField(blank=True)
 
     class Meta:
         ordering = ('-created', )
