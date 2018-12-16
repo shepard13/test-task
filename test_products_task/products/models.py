@@ -30,11 +30,11 @@ class Product(TimeStampedModel):
     )
 
     name = models.CharField(_('Name'), max_length=200)
-    slug = models.SlugField(_('Slug'))
+    slug = models.SlugField(_('Slug'), db_index=True, unique=True)
     price = models.DecimalField(_('Price'), decimal_places=2, max_digits=9)
     description = models.TextField(_('Description'), blank=True)
     category = models.ForeignKey(Category, related_name='products')
-    img = models.ImageField(blank=True)
+    img = models.ImageField(_('Image'), blank=True)
 
     class Meta:
         ordering = ('-created', )
